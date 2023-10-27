@@ -11,4 +11,14 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ZoomCategoryViewModel @Inject constructor(private val repository: ZoomCategoryRepository): ViewModel() {
+
+    var zoomCategoryItems:MutableLiveData<List<ZoomCategoryInfoItem>?> = MutableLiveData(null)
+
+    fun fetchZoomCategory() {
+        viewModelScope.launch {
+            repository.fetchZoomCategory()?.let { zoomCategoryInfoItems ->
+                zoomCategoryItems.value = zoomCategoryInfoItems
+            }
+        }
+    }
 }
