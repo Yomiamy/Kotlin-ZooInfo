@@ -27,7 +27,6 @@ class ZoomSummaryFragment : Fragment() {
     private val mBinding: FragmentZoomSummaryBinding by lazy {
         FragmentZoomSummaryBinding.inflate(layoutInflater)
     }
-    private var mSummaryInfoUrl: String? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -74,8 +73,6 @@ class ZoomSummaryFragment : Fragment() {
     }
 
     private fun initData() {
-        mSummaryInfoUrl = args.eUrl
-
         // TODO: Not yet implemented
         Log.d("", "")
     }
