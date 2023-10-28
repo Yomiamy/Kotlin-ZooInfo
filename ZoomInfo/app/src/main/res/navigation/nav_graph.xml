@@ -9,5 +9,45 @@
         android:id="@+id/zoomCategoryFragment"
         android:name="com.example.zoominfo.flow.zoom_caategory.view.ZoomCategoryFragment"
         android:label="fragment_zoom_category"
-        tools:layout="@layout/fragment_zoom_category" />
+        tools:layout="@layout/fragment_zoom_category" >
+        <action
+            android:id="@+id/action_zoomCategory_to_zoomSummary"
+            app:destination="@id/zoomSummaryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/zoomSummaryFragment"
+        android:name="com.example.zoominfo.flow.zoom_summary.view.ZoomSummaryFragment"
+        android:label="fragment_zoom_summary"
+        tools:layout="@layout/fragment_zoom_summary">
+        <argument
+            android:name="e_name"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="e_pic_url"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="e_info"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="e_memo"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="e_category"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="e_url"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
 </navigation>
