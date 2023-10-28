@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -52,12 +54,14 @@ class ZoomCategoryFragment : Fragment(), IItemClickListener {
     private fun initObserver() {
         mViewModel.zoomCategoryItems.observe(viewLifecycleOwner) { zoomCategoryItems ->
             zoomCategoryItems?.let {zoomCategoryItems ->
+                mBinding.pbProgress.visibility = GONE
                 mAdapter.submitList(zoomCategoryItems)
             }
         }
     }
 
     private fun initData() {
+        mBinding.pbProgress.visibility = VISIBLE
         mViewModel.fetchZoomCategory()
     }
 
