@@ -17,13 +17,13 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.zoominfo.R
-import com.example.zoominfo.api.response.ZoomInfo
 import com.example.zoominfo.databinding.FragmentZoomSummaryBinding
 import com.example.zoominfo.flow.zoom_summary.viewmodel.ZoomSummaryViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.lang.Exception
 
 @AndroidEntryPoint
+class ZoomSummaryFragment : Fragment() {
 
     // Arguments
     private val args: ZoomSummaryFragmentArgs by navArgs()
@@ -59,7 +59,6 @@ import java.lang.Exception
             tvInfo.text = args.eInfo
             tvMemo.text = args.eMemo.ifBlank { getString(R.string.no_memo_info) }
             tvCategory.text = args.eCategory
-
 
             rvZoomList.apply {
                 layoutManager = LinearLayoutManager(requireContext())
@@ -97,7 +96,5 @@ import java.lang.Exception
         mBinding.pbProgress.visibility = VISIBLE
 
         mViewModel.fetchZoomListByLocation(args.eName)
-    }
-
     }
 }
