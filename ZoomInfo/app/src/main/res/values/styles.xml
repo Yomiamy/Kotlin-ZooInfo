@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="action_bar_style">
+    <style name="tool_bar_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?actionBarSize</item>
         <item name="android:background">@color/bg_tool_bar</item>
         <item name="android:elevation">10dp</item>
+    </style>
+
+    <style name="tool_bar_title_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tool_bar_icon_style">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">?homeAsUpIndicator</item>
     </style>
 
     <style name="progress_bar_style">
