@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.zoominfo.api.response.ZoomCategoryInfoItem
 import com.example.zoominfo.databinding.FragmentZoomCategoryBinding
@@ -62,5 +63,13 @@ class ZoomCategoryFragment : Fragment(), IItemClickListener {
 
     // --- IItemClickListener
     override fun onClick(item: ZoomCategoryInfoItem) {
+        val directions = ZoomCategoryFragmentDirections.actionZoomCategoryToZoomSummary(
+            item.eName,
+            item.ePicURL,
+            item.eInfo,
+            item.eMemo,
+            item.eCategory,
+            item.eURL)
+        findNavController().navigate(directions)
     }
 }
