@@ -12,4 +12,14 @@ import javax.inject.Inject
 @HiltViewModel
 class ZoomSummaryViewModel @Inject constructor(private val repository: ZoomSummaryRepository) :
     ViewModel() {
+
+    var filteredZoomInfoList: MutableLiveData<List<ZoomInfo>?> = MutableLiveData(null)
+
+    fun fetchZoomListByLocation(location: String) {
+        viewModelScope.launch {
+            repository.fetchAllZoomList()?.let { zoomInfoList ->
+                filteredZoomInfoList.value = zoomInfoList.filter { zoomInfo -> zoomInfo.aLocation.contains(location) }
+            }
+        }
+    }
 }
