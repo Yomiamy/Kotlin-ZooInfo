@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent">
         <TextView
-            style="@style/tool_bar_title_style"
+            style="@style/title_style"
             android:text="@string/zoom_category_title"/>
     </androidx.appcompat.widget.Toolbar>
 
