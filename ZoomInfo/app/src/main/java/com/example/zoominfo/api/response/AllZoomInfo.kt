@@ -107,6 +107,7 @@ data class ZoomInfo (
     ): ZoomInfo {
         return ZoomInfo(newId
             , neweNameCh
+            , neweNameEn
             , neweSummary
             , neweAlsoknown
             , newLocation
