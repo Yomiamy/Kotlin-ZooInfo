@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="action_bar_style">
+    <style name="tool_bar_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?actionBarSize</item>
         <item name="android:background">@color/bg_tool_bar</item>
         <item name="android:elevation">10dp</item>
+    </style>
+
+    <style name="title_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="text_content_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="tool_bar_icon_style">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">?homeAsUpIndicator</item>
     </style>
 
     <style name="progress_bar_style">
@@ -12,4 +33,13 @@
         <item name="android:layout_height">60dp</item>
         <item name="android:indeterminateTint">@android:color/darker_gray</item>
     </style>
+
+    <style name="zoom_info_detail_content_layout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
 </resources>

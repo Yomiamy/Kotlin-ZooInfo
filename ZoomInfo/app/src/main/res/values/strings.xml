@@ -2,6 +2,6 @@
     <string name="app_name">ZoomInfo</string>
 
     <string name="zoom_category_title">臺北市立動物園</string>
-
     <string name="no_memo_info">無休館資訊</string>
+    <string name="open_in_browser">在網頁開啟</string>
 </resources>

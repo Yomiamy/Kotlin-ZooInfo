@@ -49,5 +49,55 @@
             android:name="e_url"
             app:argType="string"
             android:defaultValue="" />
+
+        <action
+            android:id="@+id/action_zoomSummary_to_zoomDetail"
+            app:destination="@id/zoomDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/zoomDetailFragment"
+        android:name="com.example.zoominfo.flow.zoom_info_detail.view.ZoomDetailFragment"
+        android:label="fragment_zoom_detail"
+        tools:layout="@layout/fragment_zoom_detail">
+        <argument
+            android:name="pic_url"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="name_ch"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="name_en"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="also_known"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="distribution"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="feature"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="behavior"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <argument
+            android:name="last_update"
+            app:argType="string"
+            android:defaultValue="" />
     </fragment>
 </navigation>
