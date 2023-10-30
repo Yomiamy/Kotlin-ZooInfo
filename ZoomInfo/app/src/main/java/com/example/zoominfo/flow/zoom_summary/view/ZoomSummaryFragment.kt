@@ -17,13 +17,15 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.zoominfo.R
+import com.example.zoominfo.api.response.ZoomInfo
 import com.example.zoominfo.databinding.FragmentZoomSummaryBinding
+import com.example.zoominfo.flow.zoom_caategory.view.ZoomCategoryFragmentDirections
 import com.example.zoominfo.flow.zoom_summary.viewmodel.ZoomSummaryViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.lang.Exception
 
 @AndroidEntryPoint
-class ZoomSummaryFragment : Fragment() {
+class ZoomSummaryFragment : Fragment(), IItemClickListener {
 
     // Arguments
     private val args: ZoomSummaryFragmentArgs by navArgs()
@@ -96,5 +98,20 @@ class ZoomSummaryFragment : Fragment() {
         mBinding.pbProgress.visibility = VISIBLE
 
         mViewModel.fetchZoomListByLocation(args.eName)
+    }
+
+    // --- IItemClickListener
+    override fun onClick(item: ZoomInfo) {
+        val directions = ZoomSummaryFragmentDirections.actionZoomSummaryToZoomDetail(
+            item.aPic01URL,
+            item.aNameCh,
+            item.aNameEn,
+            item.aAlsoknown,
+            item.aDistribution,
+            item.aFeature,
+            item.aBehavior,
+            item.aUpdate
+        )
+        findNavController().navigate(directions)
     }
 }
