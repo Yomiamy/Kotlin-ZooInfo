@@ -110,6 +110,13 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cl_summary_info_layout" />
 
+            <View
+                android:id="@+id/v_footer"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_zoom_list"/>
+
             <ProgressBar
                 android:id="@+id/pb_progress"
                 style="@style/progress_bar_style"
