@@ -8,16 +8,15 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
-import com.example.zoominfo.R
-import com.example.zoominfo.databinding.FragmentZoomDetailBinding
+import com.example.zoominfo.databinding.FragmentZooDetailBinding
 
-class ZoomDetailFragment : Fragment() {
+class ZooDetailFragment : Fragment() {
 
     // Arguments
-    private val args: ZoomDetailFragmentArgs by navArgs()
+    private val args: ZooDetailFragmentArgs by navArgs()
     // Binding
-    private val mBinding: FragmentZoomDetailBinding by lazy {
-        FragmentZoomDetailBinding.inflate(layoutInflater)
+    private val mBinding: FragmentZooDetailBinding by lazy {
+        FragmentZooDetailBinding.inflate(layoutInflater)
     }
 
     override fun onCreateView(

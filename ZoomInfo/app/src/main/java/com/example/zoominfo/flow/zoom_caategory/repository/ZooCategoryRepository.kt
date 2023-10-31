@@ -5,7 +5,7 @@ import com.example.zoominfo.api.response.ZoomCategoryInfoItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class ZoomCategoryRepository(private val api: IApi?) {
+class ZooCategoryRepository(private val api: IApi?) {
     suspend fun fetchZoomCategory(): List<ZoomCategoryInfoItem>? = withContext(Dispatchers.IO) {
         api?.fetchCategoryInfo()?.let { response ->
             if (!response.isSuccessful) {

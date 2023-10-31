@@ -4,13 +4,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.zoominfo.api.response.ZoomInfo
-import com.example.zoominfo.flow.zoom_summary.repository.ZoomSummaryRepository
+import com.example.zoominfo.flow.zoom_summary.repository.ZooSummaryRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class ZoomSummaryViewModel @Inject constructor(private val repository: ZoomSummaryRepository) :
+class ZooSummaryViewModel @Inject constructor(private val repository: ZooSummaryRepository) :
     ViewModel() {
 
     var filteredZoomInfoList: MutableLiveData<List<ZoomInfo>?> = MutableLiveData(null)

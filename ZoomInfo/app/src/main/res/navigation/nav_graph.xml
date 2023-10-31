@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/zoomCategoryFragment"
-        android:name="com.example.zoominfo.flow.zoom_caategory.view.ZoomCategoryFragment"
+        android:name="com.example.zoominfo.flow.zoom_caategory.view.ZooCategoryFragment"
         android:label="fragment_zoom_category"
-        tools:layout="@layout/fragment_zoom_category" >
+        tools:layout="@layout/fragment_zoo_category" >
         <action
             android:id="@+id/action_zoomCategory_to_zoomSummary"
             app:destination="@id/zoomSummaryFragment" />
@@ -17,9 +17,9 @@
 
     <fragment
         android:id="@+id/zoomSummaryFragment"
-        android:name="com.example.zoominfo.flow.zoom_summary.view.ZoomSummaryFragment"
+        android:name="com.example.zoominfo.flow.zoom_summary.view.ZooSummaryFragment"
         android:label="fragment_zoom_summary"
-        tools:layout="@layout/fragment_zoom_summary">
+        tools:layout="@layout/fragment_zoo_summary">
         <argument
             android:name="e_name"
             app:argType="string"
@@ -57,9 +57,9 @@
 
     <fragment
         android:id="@+id/zoomDetailFragment"
-        android:name="com.example.zoominfo.flow.zoom_info_detail.view.ZoomDetailFragment"
+        android:name="com.example.zoominfo.flow.zoom_info_detail.view.ZooDetailFragment"
         android:label="fragment_zoom_detail"
-        tools:layout="@layout/fragment_zoom_detail">
+        tools:layout="@layout/fragment_zoo_detail">
         <argument
             android:name="pic_url"
             app:argType="string"

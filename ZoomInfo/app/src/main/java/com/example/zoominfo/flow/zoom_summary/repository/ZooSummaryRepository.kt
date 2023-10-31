@@ -5,7 +5,7 @@ import com.example.zoominfo.api.response.ZoomInfo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class ZoomSummaryRepository(private val api: IApi?) {
+class ZooSummaryRepository(private val api: IApi?) {
 
     private var mAllZoomList: MutableList<ZoomInfo> = mutableListOf()
 

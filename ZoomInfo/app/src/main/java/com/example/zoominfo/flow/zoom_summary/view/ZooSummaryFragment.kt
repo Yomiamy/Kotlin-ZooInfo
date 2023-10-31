@@ -4,7 +4,6 @@ import android.content.Intent
 import android.content.Intent.ACTION_VIEW
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
@@ -18,22 +17,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.zoominfo.R
 import com.example.zoominfo.api.response.ZoomInfo
-import com.example.zoominfo.databinding.FragmentZoomSummaryBinding
-import com.example.zoominfo.flow.zoom_caategory.view.ZoomCategoryFragmentDirections
-import com.example.zoominfo.flow.zoom_summary.viewmodel.ZoomSummaryViewModel
+import com.example.zoominfo.databinding.FragmentZooSummaryBinding
+import com.example.zoominfo.flow.zoom_summary.viewmodel.ZooSummaryViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.lang.Exception
 
 @AndroidEntryPoint
-class ZoomSummaryFragment : Fragment(), IItemClickListener {
+class ZooSummaryFragment : Fragment(), IItemClickListener {
 
     // Arguments
-    private val args: ZoomSummaryFragmentArgs by navArgs()
+    private val args: ZooSummaryFragmentArgs by navArgs()
     // ViewModel
-    private val mViewModel: ZoomSummaryViewModel by viewModels()
+    private val mViewModel: ZooSummaryViewModel by viewModels()
     // Binding
-    private val mBinding: FragmentZoomSummaryBinding by lazy {
-        FragmentZoomSummaryBinding.inflate(layoutInflater)
+    private val mBinding: FragmentZooSummaryBinding by lazy {
+        FragmentZooSummaryBinding.inflate(layoutInflater)
     }
     // Adapter
     private lateinit var mAdapter: ZoomInfoAdapter
@@ -64,7 +62,7 @@ class ZoomSummaryFragment : Fragment(), IItemClickListener {
 
             rvZoomList.apply {
                 layoutManager = LinearLayoutManager(requireContext())
-                adapter = this@ZoomSummaryFragment.mAdapter
+                adapter = this@ZooSummaryFragment.mAdapter
             }
 
             Glide.with(requireContext())
@@ -102,7 +100,7 @@ class ZoomSummaryFragment : Fragment(), IItemClickListener {
 
     // --- IItemClickListener
     override fun onClick(item: ZoomInfo) {
-        val directions = ZoomSummaryFragmentDirections.actionZoomSummaryToZoomDetail(
+        val directions = ZooSummaryFragmentDirections.actionZoomSummaryToZoomDetail(
             item.aPic01URL,
             item.aNameCh,
             item.aNameEn,

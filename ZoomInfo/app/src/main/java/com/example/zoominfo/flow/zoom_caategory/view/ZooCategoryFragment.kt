@@ -11,18 +11,18 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.zoominfo.api.response.ZoomCategoryInfoItem
-import com.example.zoominfo.databinding.FragmentZoomCategoryBinding
-import com.example.zoominfo.flow.zoom_caategory.viewmodel.ZoomCategoryViewModel
+import com.example.zoominfo.databinding.FragmentZooCategoryBinding
+import com.example.zoominfo.flow.zoom_caategory.viewmodel.ZooCategoryViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ZoomCategoryFragment : Fragment(), IItemClickListener {
+class ZooCategoryFragment : Fragment(), IItemClickListener {
 
     // ViewModel
-    private val mViewModel: ZoomCategoryViewModel by viewModels()
+    private val mViewModel: ZooCategoryViewModel by viewModels()
     // Binding
-    private val mBinding: FragmentZoomCategoryBinding by lazy {
-        FragmentZoomCategoryBinding.inflate(layoutInflater)
+    private val mBinding: FragmentZooCategoryBinding by lazy {
+        FragmentZooCategoryBinding.inflate(layoutInflater)
     }
     // Adapter
     private lateinit var mAdapter: ZoomCategoryAdapter
@@ -47,7 +47,7 @@ class ZoomCategoryFragment : Fragment(), IItemClickListener {
 
         mBinding.rvCategoryList.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = this@ZoomCategoryFragment.mAdapter
+            adapter = this@ZooCategoryFragment.mAdapter
         }
     }
 
@@ -67,7 +67,7 @@ class ZoomCategoryFragment : Fragment(), IItemClickListener {
 
     // --- IItemClickListener
     override fun onClick(item: ZoomCategoryInfoItem) {
-        val directions = ZoomCategoryFragmentDirections.actionZoomCategoryToZoomSummary(
+        val directions = ZooCategoryFragmentDirections.actionZoomCategoryToZoomSummary(
             item.eName,
             item.ePicURL,
             item.eInfo,

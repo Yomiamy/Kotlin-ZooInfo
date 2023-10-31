@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.zoominfo.api.response.ZoomCategoryInfoItem
 import com.example.zoominfo.api.response.ZoomInfo
 import com.example.zoominfo.databinding.ItemZoomCategoryInfoBinding
 
